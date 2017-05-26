@@ -20,8 +20,8 @@ Module.register("mmm-weatherchart", {
 
                 var wrapper = document.createElement("div");
 		if (this.config.hideBorder) {
-			wrapper.style.width = "810px";
-			wrapper.style.height = "241px";
+			wrapper.style.width = "405px";
+			wrapper.style.height = "120px";
 			wrapper.style.overflow = "hidden";
 			wrapper.style.position = "relative";
 		}
