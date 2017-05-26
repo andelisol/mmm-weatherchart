@@ -1,14 +1,15 @@
 Module.register("mmm-weatherchart", {
         defaults: {
-                country: 'Germany',
-                area: 'North_Rhine-Westphalia',
-                city: 'Duisburg',
+                land: 'Norge',
+                fylke: 'Akershus',
+                kommune: 'Oppegård',
+		by: 'Kolbotn',
 		updateInterval: 60 * 60 * 1000, // every hour
 		hideBorder: true,
         },
         getDom: function() {
                 // add current timestamp to avoid old cached image
-                var src = "http://www.yr.no/place/" + this.config.country + "/" + this.config.area + "/" + this.config.city + "/meteogram.png?" + new Date().getTime();
+                var src = "http://www.yr.no/place/" + this.config.land + "/" + this.config.fylke + "/" + this.config.kommune + "/" + this.config.by + "/meteogram.png?" + new Date().getTime();
 
                 // invert and grayscale image via css
                 var style = "-webkit-filter: invert(100%) grayscale(100%);";
